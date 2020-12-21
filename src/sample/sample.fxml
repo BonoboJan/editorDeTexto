@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="348.0" prefWidth="526.0">
+         <children>
+            <MenuBar prefHeight="29.0" prefWidth="526.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Fitxer">
+                  <items>
+                        <MenuItem fx:id="abrir" mnemonicParsing="false" onAction="#openFile" text="Abrir..." />
+                        <MenuItem fx:id="guardar" mnemonicParsing="false" onAction="#guardarFile" text="Guardar" />
+                    <MenuItem mnemonicParsing="false" onAction="#onClose" text="Salir" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Ajuda">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onAbout" text="Sobre l'Editor" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" onAction="#onSelected" text="Edit">
+                      <items>
+                          <Menu mnemonicParsing="false" text="Tamaño...">
+                              <items>
+                              <RadioMenuItem fx:id="peq" mnemonicParsing="false" onAction="#tamaFuente" text="Pequeño ( 15px )" />
+                              <RadioMenuItem fx:id="pd" mnemonicParsing="false" onAction="#tamaFuente" text="Por defecto ( 22 px )" />
+                              <RadioMenuItem fx:id="gran" mnemonicParsing="false" onAction="#tamaFuente" text="Grande ( 35px )" />
+                              </items>
+                          </Menu>
+                          <Menu fx:id="menuf" mnemonicParsing="false" text="Fuente...">
+                              <items>
+                              <RadioMenuItem fx:id="ari" mnemonicParsing="false" onAction="#estFuente" text="Arial" />
+                              <RadioMenuItem fx:id="times" mnemonicParsing="false" onAction="#estFuente" text="Times New Roman" />
+                              <RadioMenuItem fx:id="verd" mnemonicParsing="false" onAction="#estFuente" text="Verdana" />
+                              </items>
+                          </Menu>
+                        <Menu fx:id="edit" disable="true" mnemonicParsing="false" text="Editar">
+                          <items>
+                            <MenuItem fx:id="cp" mnemonicParsing="false" onAction="#copiar" text="Copiar" />
+                              <MenuItem fx:id="cv" mnemonicParsing="false" onAction="#pegar" text="Pegar" />
+                              <MenuItem fx:id="cx" mnemonicParsing="false" onAction="#cortar" text="Cortar" />
+                          </items>
+                        </Menu>
+                      </items></Menu>
+              </menus>
+            </MenuBar>
+            <TextArea fx:id="texto" layoutX="17.0" layoutY="75.0" prefHeight="259.0" prefWidth="489.0" />
+            <Button fx:id="copiar" layoutX="17.0" layoutY="40.0" mnemonicParsing="false" onAction="#copiar" text="Copiar" />
+            <Button fx:id="cortar" layoutX="90.0" layoutY="40.0" mnemonicParsing="false" onAction="#cortar" text="Cortar" />
+            <Button fx:id="pegar" layoutX="163.0" layoutY="40.0" mnemonicParsing="false" onAction="#pegar" text="Pegar" />
+         </children></Pane>
+   </children>
+</GridPane>
